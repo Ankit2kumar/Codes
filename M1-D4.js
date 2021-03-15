@@ -1,10 +1,4 @@
-/*
-ASSIGNMENT RULES
-- All the answers must be written in JavaScript
-- You can ask for help, reach the Teaching Assistants if needed
-- The solution must be available for the tutors by the end of the day (5PM CET)
-- You can Google / use StackOverflow BUT we suggest you to use just the material provided
-*/
+
 
 /* EXERCISE 1
 Write a function "area" which receives 2 parameters (l1,l2) and calculates the area of the associated rectangle.
@@ -37,15 +31,7 @@ It should add the word "Strive" in front of the given string, but if the given s
 */
 
 
-const strivify = function(inputString){ // we are creating a function which accepts a string
-    if(inputString === "Strive")
-    console.log("The Output String: ", inputString)
-    else
-    console.log("The Output String: Strive " , inputString)
-}
 
-// strivify("Apple")
-// strivify("Strive")// 
 /* WRITE YOUR CODE HERE */
 
 
@@ -59,17 +45,7 @@ HINT: Module Operator
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
-const reverseString = function(inputString){
-    let resultString = ""
-    for(let i = inputString.length-1; i>=0; i--){
-        resultString = resultString+inputString[i]
-    }
-    console.log(inputString, ": reverted --> ", resultString)
-}
-// reverseString("Pneumonoultramicroscopicsilicovolcanoconiosis")
-// reverseString("Floccinaucinihilipilification")
-reverseString("Strive")
-reverseString("Sara")
+
 /* WRITE YOUR CODE HERE */
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
@@ -90,6 +66,3 @@ Write a function "giveMeRandom" which accepts a number n and returns an array co
 
 /* WRITE YOUR CODE HERE */
 
-/* WHEN YOU ARE FINISHED
-Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
-*/
