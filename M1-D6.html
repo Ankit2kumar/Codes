@@ -117,13 +117,17 @@ with the name of your shop -->
 		<footer>ADDRESS:- hauptstraße 5, 87854</footer>
 		<input type="text" />
 
-		<!-- <script>
-			const changeH1 = function () {
-				let changedH1 = document.querySelector('title').innerText;
-				changedH1 = 'People DUMB, Phones SMART';
+		<script>
+			const change = function () {
+				document.body.style.backgroundColor = 'cyan';
+				let title = document.getElementsByTagName('h1')[0];
+				title.innerText = 'Content Changed';
 			};
-			changeH1();
-		</script> -->
+			const change2 = function () {
+				let foot = document.getElementsByTagName('footer')[0];
+				foot.innerText = 'Address :- Hellostraße00, PLZ=8739764';
+			};
+		</script>
 	</body>
 </html>
 
