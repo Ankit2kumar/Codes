@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0436)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/191767270778436.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210318%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210318T132725Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27M1-D9.html&X-Amz-Signature=d3323339b62b10649c21bdd71828643977294f824160c9cbb047456e4b858eb0 -->
+<html>
+	<!--
+        BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+        EXTRA: 
+        - Take ALWAYS a new number (eg. avoid randoming the number 10 3 times)
+        - Create a USER BOARD with 24 randomized numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.
+    --><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+		<style>
+			body {
+				max-height: 60vh;
+			}
+			table {
+				background-color: green;
+				border: 1rem solid black;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
+			#btn {
+				margin-top: 250px;
+			}
+		</style>
+	</head>
+	<body data-new-gr-c-s-check-loaded="14.1000.0" data-gr-ext-installed="">
+		<div>
+			<input id="btn" type="button" value="Click to Pick a number" />
+		</div>
+		<script>
+			let myTable = document.createElement('table');
+			myTable.classList.add('mainBoard');
+
+			for (let y = 0; y < 4; y++) {
+				let myRow = document.createElement('tr');
+				for (let x = 1; x < 20; x++) {
+					let myCell = document.createElement('td');
+					myCell.innerText = x + 19 * y;
+					myRow.appendChild(myCell);
+				}
+
+				myTable.appendChild(myRow);
+			}
+			document.querySelector('body').appendChild(myTable);
+			let arr = [];
+			const btn = document.querySelector('#btn');
+			btn.onclick = function (event) {
+				let newNumber = Math.floor(Math.random() * 76 + 1);
+				console.log('NewNumber', newNumber);
+				let table = document.querySelector('table');
+				for (let i = 0; i < table.rows.length; i++) {
+					for (j = 0; j < table.rows[i].cells.length; j++) {
+						if (table.rows[i].cells[j].innerText == newNumber)
+							table.rows[i].cells[j].style.backgroundColor = 'red';
+					}
+				}
+			};
+		</script>
+	</body>
+</html>
