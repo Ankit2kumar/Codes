@@ -1,0 +1,20 @@
+.navigation-bar {
+  background-color: rgb(38, 97, 173);
+  opacity: 0.95;
+}
+input[type="number"] {
+  width: 100px;
+  height: 50px;
+  border-radius: 100px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: large;
+}
+.myButton {
+  background-color: #3179b9;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: large;
+}
